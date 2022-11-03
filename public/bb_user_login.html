@@ -1,0 +1,100 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+<style>  
+    body{  
+      font-family: Calibri, Helvetica, sans-serif;  
+      background-color: lightblue; 
+      text-align: center;
+    }  
+    .container {  
+        padding: 50px;  
+      background-color: lightblue;  
+    }  
+      
+    input[type=text]   {
+      width: 21%;  
+      padding: 15px;  
+      padding-left: 10px;
+      margin: 5px 0 22px 0;  
+      display: inline-block;  
+      border: none;  
+      background: #f1f1f1;  
+    }  
+    input[type=password] {
+        width: 21%;  
+      padding: 15px;  
+      margin: 5px 0 22px 0;  
+      display: inline-block;  
+      border: none;  
+      background: #f1f1f1;  
+    }  
+    .plabel{
+        padding-right: 15px;
+        padding-left:100px;
+    }
+    .elabel{
+        padding-right: 20px;
+    }
+    input[type=text]:focus, input[type=password]:focus {  
+      background-color: orange;  
+      outline: none;  
+    }  
+     div {  
+                padding: 10px 0;  
+             }  
+    hr {  
+      border: 1px solid #f1f1f1;  
+      margin-bottom: 25px;  
+    }  
+    .loginbtn {  
+      background-color: #ff666b;  
+      color: white;  
+      padding: 16px 20px;  
+      margin: 8px 0;  
+      border: none;  
+      cursor: pointer;  
+      width: 10%;  
+      opacity: 0.9; 
+      border-radius: 20px; 
+    }  
+    .loginbtn:hover {  
+      opacity: 1;  
+    } 
+    .closebtn {  
+      background-color: #ff666b;  
+      color: white;  
+      padding: 16px 20px;  
+      margin: 8px 0;  
+      border: none;  
+      cursor: pointer;  
+      width: 10%;  
+      opacity: 0.9; 
+      border-radius: 20px; 
+    }  
+    .closebtn:hover {  
+      opacity: 1;  
+    }   
+    </style>  
+</head>  
+<body>  
+    <div class="container"></div>
+<form>  
+    
+  <center>  <h1> User Login Form </h1> </center>  
+  <hr>      
+<label class="elabel">   
+<b>E-mail / Mobile Number :  </b>
+</label>   
+<input type="text" name="emph" placeholder="email / mobile no." size="10"/ required>     
+  <br>
+    <label for="psw" class="plabel"><b>Password: </b></label>  
+    <input type="password" placeholder="Enter Password" name="psw" required>  
+  
+    <br>
+    <button type="submit" class="loginbtn">Login</button> 
+    <button type="button" class="closebtn" onclick="window.close();">Close</button>   
+</form>  
+</div>
+</body> 
