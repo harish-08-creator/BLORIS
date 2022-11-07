@@ -20,6 +20,13 @@ app.use(cookieParser());
 app.use(express.static('public'))
 app.use('/images', express.static(__dirname + '/public/images'))
 
+//session config
+// app.use(session({
+//   secret : 'hakanix',
+//   resave : true,
+//   saveUninitialized : true
+// }));
+
 // routes
 app.use('/', mainRouter);
 app.use('/bb_user_reg', userregRouter);

@@ -1,6 +1,6 @@
 function userreg(req,res) {
         const con = require('../connection.js')
-
+  
         console.log("User reg post")
         var Firstname = req.body.Firstname;
         var Lastname = req.body.Lastname;

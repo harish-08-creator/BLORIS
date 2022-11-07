@@ -2,6 +2,8 @@ const express = require('express')
 var path = require('path')
 const router = express.Router()
 var userreg = require('./bb_user_reg.js');
+var instreg = require('./bb_inst_reg.js');
+var userlog = require('./bb_user_login.js');
 
 var app = express();
 app.set('view engine', 'ejs')
@@ -34,14 +36,31 @@ app.get('/bb_inst_reg', (req,res) => {
   console.log("Inst reg page")
 })
 
+app.post('/bb_inst_reg', (req,res) => {
+  instreg(req,res)
+})
+
 app.get('/bb_user_login', (req,res) => {
   res.render('bb_user_login')
+  console.log("User login page")
+})
+
+app.post('/bb_user_login', (req,res) => {
+  userlog(req,res)
 })
 
 app.get('/bb_inst_login', (req,res) => {
   res.render('bb_inst_login')
 })
 
+app.get('/bb_find', (req, res) => {
+  res.render('bb_find')
+})
+
+app.get('/logout', (req, res) => {
+  // req.session.destroy();
+  res.redirect("/");
+})
 // app.get('/', (req,res) => {
 //   res.render('bb_user_reg')
 // })
