@@ -5,6 +5,11 @@ var con = mysql.createConnection({
     user: "root",
     password: "",
     database: "bank"
-});
+})
+
+con.connect(function (err) {
+    if (err) throw err
+    console.log("Database Connected!")
+})
 
 module.exports = con
