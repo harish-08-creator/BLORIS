@@ -3,7 +3,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>BLORIS</title>
+  <link rel="icon" type="image/x-icon" href="/images/nbbicon.ico">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -64,14 +65,14 @@
               <input type="text" class="form-control w-50" name="Firstname" placeholder="Firstname" size="15" required />
               <label class="form-label"> Lastname </label>
               <input type="text" class="form-control w-50" name="Lastname" placeholder="Lastname" size="15" required />
-              <br>
                 <label for="Email" class="form-label">Email</label>
                 <input type="email" class="form-control w-50" placeholder="Enter Email" name="Email" required>
                 <label class="form-label">
                   Blood Group :
                 </label>
 
-                <select name="Blood Group" required>
+                <select class="form-select form-select-sm w-50" name="Blood Group" required>
+                  <option value="Null" selected>Dropdown</option>
                   <option value="A+">A+</option>
                   <option value="A-">A-</option>
                   <option value="B+">B+</option>
@@ -83,12 +84,13 @@
                   <option value="A1+">A1+</option>
                   <option value="A1-">A1-</option>
                 </select>
-               <br><br>
-                <label class="form-label w-50"> Location: </label>
-                <input type="text" class="form-control" name="Location" id="Location" placeholder="Location" size="15" required />
-                <br><br>
+                <label class="form-label"> Location: </label>
+                <input type="text" class="form-control w-50" name="Location" id="Location" placeholder="Location" size="15" required />
+                <br>
+                <div class="text-center">
                 <button type="submit" class="btn btn-danger w-25 findbtn" onclick="find()">Find</button>
-                <br><br><br>
+              </div>
+                <br><br>
           </form>
         </div>
 
