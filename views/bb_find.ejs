@@ -60,7 +60,7 @@
           </div>
         </div>
         <div class="w-50 h-auto">
-          <form name="DonorFind" action="#map">
+          <form name="DonorFind" action="#mapframe">
               <label class="form-label"> Firstname </label>
               <input type="text" class="form-control w-50" name="Firstname" placeholder="Firstname" size="15" required />
               <label class="form-label"> Lastname </label>
@@ -88,7 +88,7 @@
                 <input type="text" class="form-control w-50" name="Location" id="Location" placeholder="Location" size="15" required />
                 <br>
                 <div class="text-center">
-                <button type="submit" class="btn btn-danger w-25 findbtn" onclick="find()">Find</button>
+                <button type="button" class="btn btn-danger w-25 findbtn" onclick="find()">Find</button>
               </div>
                 <br><br>
           </form>
@@ -160,7 +160,7 @@
           </div>
           <div class="col-sm col-md-4">
       <div class="mt-3">
-          <h4><i class="fas fa-at text-dark ms-2"></i><a href="mailto:nbbindia@gmail.com" text-dark>  nbbindia@gmail.com</a></h4>
+          <h4><i class="fas fa-at text-dark ms-2"></i><a href="mailto:nbbindia@gmail.com" text-dark>nbbindia@gmail.com</a></h4>
           <h4 class="text-dark">  Call us at : <a href="tel:+919361780464" class="text-secondary">9361780464</a></h4>
       </div>
   </div>
@@ -182,7 +182,7 @@
         const tambaram = ["Urapakkam", "urapakkam", "Perungulathur", "perungulathur", "Tambaram", "tambaram", "Tambaram Sanitorium", "tambaram sanitorium","Vandalur","vandalur"];
         const ecr = ["Kelambakam", "kelambakam", "Navalur", "navalur", "Sholinganallur", "sholinganallur", "Tambara Sanitorium", "tambaram sanitorium","Vandalur","vandalur"];
 
-        console.log(location);
+        console.log(location)
         if (chengalpattu.includes(location)) {
           
           document.getElementById("mapframe").src = "https://www.google.com/maps/d/embed?mid=1KfuCytQ5-w_XrlsK8X2VjUO4yzcsUVNK&ehbc=2E312F";
@@ -191,7 +191,7 @@
           
           document.getElementById("mapframe").src = "https://www.google.com/maps/d/embed?mid=1aiz4RiU9FBDmWAzpnku0BWlzN5XAgVm5&ehbc=2E312F";
         }
-        if (tambaram.includes(location)) {
+        if (ecr.includes(location)) {
           
           document.getElementById("mapframe").src = "https://www.google.com/maps/d/embed?mid=1aiz4RiU9FBDmWAzpnku0BWlzN5XAgVm5&ehbc=2E312F";
         }
@@ -204,7 +204,8 @@
 
 
 
-      }</script>
+      }
+      </script>
 </body>
 
 </html>

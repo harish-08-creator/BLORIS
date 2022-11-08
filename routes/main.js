@@ -59,7 +59,12 @@ app.get('/bb_find', (req, res) => {
 
 app.get('/logout', (req, res) => {
   // req.session.destroy();
-  res.redirect("/");
+  res.redirect('/');
+})
+
+app.get('/bb_map', (req, res) => {
+  // req.session.destroy();
+  res.redirect('bb_map');
 })
 // app.get('/', (req,res) => {
 //   res.render('bb_user_reg')
