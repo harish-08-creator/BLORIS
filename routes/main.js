@@ -65,12 +65,13 @@ app.get('/bb_find', (req, res) => {
 
 app.get('/bb_inst_port', (req, res) => {
   // req.session.destroy();
-  res.redirect('bb_inst_port');
+  res.render('bb_inst_port');
+  console.log("Institution need to be approved!")
 })
 
 app.get('/logout', (req, res) => {
   // req.session.destroy();
-  res.redirect('/');
+  res.render('main');
 })
 
 // app.get('/bb_map', (req, res) => {
