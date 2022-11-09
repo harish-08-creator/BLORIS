@@ -88,7 +88,7 @@
                 <input type="text" class="form-control w-50" name="Location" id="Location" placeholder="Location" size="15" required />
                 <br>
                 <div class="text-center">
-                <button type="button" class="btn btn-danger w-25 findbtn" onclick="find()">Find</button>
+                <button type="button" class="btn btn-danger w-25 findbtn" onclick="find(); changeH1Text();">Find</button>
               </div>
                 <br><br>
           </form>
@@ -97,13 +97,13 @@
       </div>
     </section>
     <center>
-      <h1><u>Bloodbanks Near By You</u></h1>
+      <h1><u>Blood/Organ Banks <span id="frametitle">Over India</span></u></h1>
     </center>
     <section id="map">
     <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248756.1167537794!2d80.06892521258872!3d13.047487786031711!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5265ea4f7d3361%3A0x6e61a70b6863d433!2sChennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1652249833004!5m2!1sen!2sin"
+      src="https://www.google.com/maps/d/embed?mid=1zJFxCgwfPFxwyC1kFVdQCxcubnXWCiM&ehbc=2E312F"
       width="1100" height="800" style="border:0; margin: 20px;" allowfullscreen="" loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade" id="mapframe">
+      referrerpolicy="no-referrer-when-downgrade" id="mapframe" style="box-shadow: 1px 1px 1px #888;">
     </iframe>
     </section>
 
@@ -178,32 +178,28 @@
         var lname = document.forms["DonorFind"]["Lastname"];
         var location = document.getElementById("Location").value;
         var email = document.forms["DonorFind"]["E-mail"];
-        const chengalpattu = ["Maraimalai Nagar", "Potheri", "Paranur", "Kattankulathur", "maraimalai nagar", "potheri", "paranur", "kattankulathur"];
-        const tambaram = ["Urapakkam", "urapakkam", "Perungulathur", "perungulathur", "Tambaram", "tambaram", "Tambaram Sanitorium", "tambaram sanitorium","Vandalur","vandalur"];
-        const ecr = ["Kelambakam", "kelambakam", "Navalur", "navalur", "Sholinganallur", "sholinganallur", "Tambara Sanitorium", "tambaram sanitorium","Vandalur","vandalur"];
-
+        const North = ["Ayanavaram","Mogapair","Ayanambakkam","Anna Nagar","George Town","Royapuram","Old Washermanpet","Shenoy Nagar","Chennai"];
+        const South = ["Kanchipuram","kanchipuram","Kancheepuram","kancheepuram","Manapakkam","Tambaram","West Tambaram","Rose Avenue","Perumbakkam","Madipakkam","St.Thomas Mount","Adyar","Chikkaravapuram","Rathinamangalam","Harijana Colony","Ekkatuthangal"];
+        const Central = ["Park Town","Egmore","Kilpauk","K.K.Nagar","Thousand Lights","Nungambakkam","Nandanam","Vadapalani","T.Nagar","Porur","Aminijikarai","Royapettah","Triplicane","CIT Nagar","Velappanchava"];
         console.log(location)
-        if (chengalpattu.includes(location)) {
+        if (North.includes(location)) {
           
-          document.getElementById("mapframe").src = "https://www.google.com/maps/d/embed?mid=1KfuCytQ5-w_XrlsK8X2VjUO4yzcsUVNK&ehbc=2E312F";
+          document.getElementById("mapframe").src = "https://www.google.com/maps/d/embed?mid=18yQzzeakTpC0EfdnSVOp7xuRc9cHIcU&ehbc=2E312F";
         }
-        if (tambaram.includes(location)) {
+        else if (South.includes(location)) {
           
-          document.getElementById("mapframe").src = "https://www.google.com/maps/d/embed?mid=1aiz4RiU9FBDmWAzpnku0BWlzN5XAgVm5&ehbc=2E312F";
+          document.getElementById("mapframe").src = "https://www.google.com/maps/d/embed?mid=1kABTnPueFik_nS-JGCcW6dSX5NbIBjI&ehbc=2E312F";
         }
-        if (ecr.includes(location)) {
+        else if (Central.includes(location)) {
           
-          document.getElementById("mapframe").src = "https://www.google.com/maps/d/embed?mid=1aiz4RiU9FBDmWAzpnku0BWlzN5XAgVm5&ehbc=2E312F";
+          document.getElementById("mapframe").src = "https://www.google.com/maps/d/embed?mid=1K22h0Ie0mL6xsuL5yXMcFdhq1OjDnkc&ehbc=2E312F";
         }
-        if (tambaram.includes(location)) {
-          
-          document.getElementById("mapframe").src = "https://www.google.com/maps/d/embed?mid=1aiz4RiU9FBDmWAzpnku0BWlzN5XAgVm5&ehbc=2E312F";
-        }
+      }
 
-
-
-
-
+      function changeH1Text()
+      {
+        var heading = document.getElementById('frametitle');
+        heading.innerHTML = 'Near You';
       }
       </script>
 </body>

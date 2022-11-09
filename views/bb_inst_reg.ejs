@@ -119,7 +119,7 @@ Current Address :
   
 <label for="psw-repeat"><b>Re-type Password</b></label>  
 <input type="password" placeholder="Retype Password" name="Confirm-Password" required>  
-<button type="submit" class="registerbtn">Register</button>    
+<button type="submit" class="registerbtn" onclick="Validation()">Register</button>    
 </form>  
 
 
@@ -146,14 +146,14 @@ Current Address :
       }
   }
 
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbzAYq2XLr8mIKKvtWUPYa6vkHjyVFtqE-NRMMJ4mtju65njvODQOUZiJunHZsjrCk0pAQ/exec'
-      const form = document.forms['Institution Registration']
+  // const scriptURL = 'https://script.google.com/macros/s/AKfycbzAYq2XLr8mIKKvtWUPYa6vkHjyVFtqE-NRMMJ4mtju65njvODQOUZiJunHZsjrCk0pAQ/exec'
+  //     const form = document.forms['Institution Registration']
 
-      form.addEventListener('submit', e => {
-          e.preventDefault()
-          fetch(scriptURL, {method: 'POST', body: new FormData(form)})
-              .catch(error => console.error('Error!', error.message))
-      })
+  //     form.addEventListener('submit', e => {
+  //         e.preventDefault()
+  //         fetch(scriptURL, {method: 'POST', body: new FormData(form)})
+  //             .catch(error => console.error('Error!', error.message))
+  //     })
 </script>
 
 
